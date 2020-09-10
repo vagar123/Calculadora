@@ -64,7 +64,7 @@ un mensaje relacionado con ese día
 */
 
 function mostrarDia(){
-    let mensaje = prompt("Digite un día de la semana por favor")
+    let mensaje = prompt("Escriba un día de la semana por favor...ejemplo ( lunes, martes, miercoles...)")
 
     if(mensaje === 'lunes'){
         alert("¿Sabías que el Lunes 20 de Julio del 2020 se celebró el día de la indepencia en nuestro país?")
