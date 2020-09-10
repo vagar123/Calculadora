@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculadora</title>
+        <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+
+        <div class="container">
+            <div class="calculadora">
+                <h1> Calculadora </h1>
+                <div class="info">
+                    <input type="text" id="buscador" disabled>
+                </div>
+                <div class="part">
+
+                    <div class="part3">
+                        <button class="fun">X2</button>
+                        <button class="fun">X3</button>
+                        <button class="fun">X!</button>
+                        <button class="fun">^</button>
+                        <button class="fun">(</button>
+                        <button class="fun">)</button>
+                        <button class="fun">√</button>
+                        <button class="fun">√</button>
+                    </div>
+                    
+                    <div class="part">
+                        <input type="button" class="num" value="1" onclick="escribirNumero(this.value)">
+                        <input type="button" class="num" value="2" onclick="escribirNumero(this.value)">
+                        <input type="button" class="num" value="3" onclick="escribirNumero(this.value)">
+                        <input type="button" class="num" value="4" onclick="escribirNumero(this.value)">
+                        <input type="button" class="num" value="5" onclick="escribirNumero(this.value)">
+                        <input type="button" class="num" value="6" onclick="escribirNumero(this.value)">
+                        <input type="button" class="num" value="7" onclick="escribirNumero(this.value)">
+                        <input type="button" class="num" value="8" onclick="escribirNumero(this.value)">
+                        <input type="button" class="num" value="9" onclick="escribirNumero(this.value)">
+                        <input type="button" class="num" value="Borrar" onclick="limpiar(this.value)">
+                        <input type="button" class="num" value="0" onclick="escribirNumero(this.value)"> 
+                        <input type="button" class="num" value="=" onclick="mostrarResultado()">
+                    </div>
+
+                    <div class="calculadora part2">
+                        <input type="button" class="ope" value="+" onclick="escribirOperador(this.value)">
+                        <input type="button" class="ope" value="-" onclick="escribirOperador(this.value)">
+                        <input type="button" class="ope" value="*" onclick="escribirOperador(this.value)">
+                        <input type="button" class="ope" value="/" onclick="escribirOperador(this.value)">
+                    </div>
+                </div>
+            </div>
+            <button id="boton" onclick="mostrarDia()">Preguntar día</button>
+        </div>
+
+
+        <script src="js/scriptCal.js"></script>
+
+    </body>
+</html>
