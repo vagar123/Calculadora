@@ -38,6 +38,13 @@ function mostrarResultado() {
         let divi = parseInt(arreglo[0]) / parseInt(arreglo[2])
         document.getElementById("buscador").value = divi
 
+    } else {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Something went wrong!',
+            footer: '<a href>Why do I have this issue?</a>'
+        })
     }
 
     /*switch (arreglo[1]) {
@@ -63,29 +70,92 @@ Agregar un boton, al momento de dar clic preguntar al usuario puede ser número 
 un mensaje relacionado con ese día
 */
 
-function mostrarDia(){
+function mostrarDia() {
+    (async () => {
+        const { value: mensaje } = await Swal.fire({
+            title: 'Día de la semana',
+            text: 'Escriba un día de la semana, ejemplo (lunes, martes, miercoles ...)',
+            input: 'text'
+        })
+
+        if (mensaje == "lunes") {
+            Swal.fire(
+                'Woah!',
+                "¿Sabías que el Lunes 20 de Julio del 2020 se celebró el día de la indepencia en nuestro país?"
+            )
+
+        } else if (mensaje == "martes") {
+            Swal.fire(
+                'Woah!',
+                '¿Sabías que el Martes 8 de diciembre del 2020 se celebrará el día de la inmaculada concepción?'
+            )
+
+        } else if (mensaje == "miercoles") {
+            Swal.fire(
+                'Woah!',
+                '¿Sabías que el Miercoles 11 de noviembre del 2020 se celebrará la independencia de Cartagena?'
+            )
+
+        } else if (mensaje == "jueves") {
+            Swal.fire(
+                'Woah!',
+                '¿Sabías que el Juves 9 de abril del 2020 fue un día de la semana santa (Jueves santo)?'
+            )
+
+        } else if (mensaje == "viernes") {
+            Swal.fire(
+                'Woah!',
+                '¿Sabías que el viernes 1 de mayo del 2020 se celebró el día del trabajo en nuestro país?'
+            )
+
+        } else if (mensaje == "sabado") {
+            Swal.fire(
+                'Woah!',
+                '¿Sabías que después del viernes sigue el sábado?'
+            )
+
+        } else if (mensaje == "domingo") {
+            Swal.fire(
+                'Woah!',
+                '¿Sabías que después del sábado sigue el domingo?'
+            )
+
+        } else {
+            Swal.fire(
+                'Error',
+                `${mensaje} no es un día de la semana`
+            )
+        }
+
+
+    })()
+}
+
+
+
+/*function mostrarDia() {
     let mensaje = prompt("Escriba un día de la semana por favor...ejemplo ( lunes, martes, miercoles...)")
 
-    if(mensaje === 'lunes'){
+    if (mensaje === 'lunes') {
         alert("¿Sabías que el Lunes 20 de Julio del 2020 se celebró el día de la indepencia en nuestro país?")
 
-    } else if(mensaje === 'martes'){
+    } else if (mensaje === 'martes') {
         alert("¿Sabías que el Martes 8 de diciembre del 2020 se celebrará el día de la inmaculada concepción?")
 
-    } else if(mensaje === 'miercoles'){
+    } else if (mensaje === 'miercoles') {
         alert("¿Sabías que el Miercoles 11 de noviembre del 2020 se celebrará la independencia de Cartagena?")
 
-    } else if(mensaje === 'jueves'){
+    } else if (mensaje === 'jueves') {
         alert("¿Sabías que el Juves 9 de abril del 2020 fue un día de la semana santa (Jueves santo)?")
 
-    } else if(mensaje === 'viernes'){
+    } else if (mensaje === 'viernes') {
         alert("¿Sabías que el viernes 1 de mayo del 2020 se celebró el día del trabajo en nuestro país?")
 
-    } else if(mensaje === 'sabado'){
+    } else if (mensaje === 'sabado') {
         alert("¿Sabías que después del viernes sigue el sábado?")
 
-    } else if(mensaje === 'domingo'){
+    } else if (mensaje === 'domingo') {
         alert("¿Sabías que después del sábado sigue el domingo?")
     }
 
-}
+}*/
